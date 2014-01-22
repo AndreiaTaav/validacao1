@@ -6,6 +6,8 @@
     if(!isset($_SESSION["cadastros"])) {
         $_SESSION["cadastros"] = array();
     }
+    
+    \\aceita palavras com acento
     setlocale(LC_ALL, "pt_BR", "ptb");
     
     //OBTER DADOS DO FORUMLARIO
@@ -74,6 +76,7 @@
         echo "Tamanho inválido ! <br/>";
         $camposValidados = false;        
     }
+    
     
      if(!ctype_digit ($telefone)){
         echo "Digite somente numeros !<br/>";
